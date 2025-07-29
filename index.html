@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="intro-section">
+        <h2>Добро пожаловать! Готовы пройти тест?</h2>
+        <button id="start-quiz">начать тест</button>
+    </div>
+    <div class="quiz-border" style="display: none;">
+        <h1>Quiz</h1>
+        <div class="quiz">
+            <h2 id="question">question</h2>
+            <div id="answer-buttons">
+                <button class="btn">answer</button>
+                <button class="btn">answer</button>
+                <button class="btn">answer</button>
+                <button class="btn">answer</button>
+                <button class="btn">answer</button>
+                <button class="btn">answer</button>
+            </div>
+            <div class="button-bot">
+                <button id="next-btn">дальше</button>
+            </div>
+        </div>
+    </div>
+    <div id="result-section" style="display: none;">
+      <h2>Ваш результат</h2>
+      <p id="result-text"></p>
+      <div id="result-image"></div>
+      <button id="restart-btn">начать заново</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
