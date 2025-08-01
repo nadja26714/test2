@@ -55,7 +55,7 @@ const startButton = document.getElementById('start-quiz');
 const introSection = document.getElementById('intro-section');
 const quizContainer = document.querySelector('.quiz-border');
 
-let shuffledQuestions, currentQuestionIndex;
+let currentQuestionIndex;
 let score = 0;
 
 startButton.addEventListener('click', () => {
@@ -99,16 +99,10 @@ function selectAnswer(button, correct) {
     } else {
         button.style.backgroundColor = 'red';
     }
-
-    Array.from(answerButtonsElement.children).forEach(btn => {
-        btn.disabled = true;
-        if (questions[currentQuestionIndex].answers.some(ans => ans.text === btn.innerText && ans.correct)) {
-            btn.style.backgroundColor = 'green';
-        }
-    });
  
     nextButton.style.display = '';
 }
+
 
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
